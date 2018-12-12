@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="498.137">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Name="TextBox" Height="23" Margin="50,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="386"/>
-        <Button Content="Count words" HorizontalAlignment="Left" Margin="198,365,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Name="TextBox" Height="23" Margin="50,70,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="386" TextChanged="TextBox_TextChanged"/>
         <ListBox HorizontalAlignment="Left" Height="200" Margin="50,141,0,0" VerticalAlignment="Top" Width="386" Name="ListBox"/>
-
+        <Label Content="sentence:" HorizontalAlignment="Left" Margin="50,44,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label Content="Count result:" HorizontalAlignment="Left" Margin="50,115,0,0" VerticalAlignment="Top"/>
+        
     </Grid>
 </Window>

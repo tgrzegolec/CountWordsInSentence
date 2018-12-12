@@ -26,7 +26,13 @@ namespace CountWordsInSentence
             TextBox.Text = "This is a statement, and so is this";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CountWords();
+        }
+
+        private void CountWords()
         {
             string[] sentence = TextBox.Text.ToLower().Split(new char[] { ' ', '.', ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
             var result = sentence.GroupBy(w => w).ToDictionary(w => w.Key, c => c.Count()).OrderByDescending(desc => desc.Value);
